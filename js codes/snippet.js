@@ -34,3 +34,4 @@ let fullName = prompt("enter your full Name");
 console.log("fullName");
 let username = "@" + fullName + fullName.length;
 console.log("username");
+console.log(username.replaceAll("a", "b"));
