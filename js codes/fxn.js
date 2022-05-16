@@ -55,3 +55,31 @@ let largest = arr2.reduce((pre, curr) => {
   return pre > curr ? pre : curr;
 });
 console.log(largest);
+
+//topper
+
+let marks = [23, 89, 90, 93, 95, 98];
+
+let topper = marks.filter((val) => {
+  return val > 90;
+});
+console.log(topper);
+
+//print 1 to n
+
+let n = prompt("enter the number");
+let arr = [];
+for (let i = 1; i <= n; i++) {
+  arr[i - 1] = i; //1(0),2(1),3(2)
+}
+console.log(arr);
+
+let sum = arr.reduce((pre, curr) => {
+  return pre + curr;
+});
+console.log("sum"=sum);
+
+let productResult = arr.reduce((pre, curr) => {
+  return pre * curr;
+});
+console.log("product"=productResult);
