@@ -35,3 +35,14 @@ console.log("fullName");
 let username = "@" + fullName + fullName.length;
 console.log("username");
 console.log(username.replaceAll("a", "b"));
+
+//Array
+let arr = [10, 20, 30, 40, 50, 60];
+arr.splice(2, 2, 101, 102);
+//Add Element
+
+arr.splice(2, 0, 101);
+//Delete Element
+arr.splice(3, 1);
+//Replace Element
+arr.splice(3, 1, 101);
