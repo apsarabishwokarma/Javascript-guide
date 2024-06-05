@@ -4,7 +4,7 @@
 
 
 ## Meeting Reservation
- - [LIVE 🌐](https://apsarabishwokarma.github.io/Javascript-snippet/frontend/meeting-reservation)
+ - [LIVE 🌐](https://apsarabishwokarma.github.io/Javascript-snippet/frontend%20/meeting-reservation)
 
 
 ```js
