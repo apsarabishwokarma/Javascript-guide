@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    clearErrors();
 
     // Get form values wrt ids
-    const firstName = document.getElementById("firstname").value.trim(); //trim() to remove spaces
+    const firstName = document.getElementById("firstname").value.trim();
     const lastName = document.getElementById("lastname").value.trim();
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
@@ -15,61 +16,92 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = document.getElementById("password").value.trim();
     const confirmPassword = document.getElementById("cpassword").value.trim();
 
+    let isValid = true;
+
     if (!firstName) {
-      alert("First Name is required");
-      return;
+      setError("firstname-error", "First Name is required");
+      isValid = false;
     }
 
     if (!lastName) {
-      alert("Last Name is required");
-      return;
+      setError("lastname-error", "Last Name is required");
+      isValid = false;
     }
 
     if (!email) {
-      alert("Email is required");
-      return;
+      setError("email-error", "Email is required");
+      isValid = false;
     }
 
     if (!validateEmail(email)) {
-      alert("Please enter a valid email address");
-      return;
-    }
-    if (!phone) {
-      alert("Phone Number is required");
-      return;
+      setError("email-error", "Please enter a valid email address");
+      isValid = false;
     }
 
-    if (phone.length != 10) {
-      alert("Phone number should be of 10 digits!");
-      return;
+    if (!phone) {
+      setError("phone-error", "Phone Number is required");
+      isValid = false;
+    }
+
+    if (phone.length !== 10) {
+      setError("phone-error", "Phone number should be of 10 digits");
+      isValid = false;
     }
 
     if (!gender) {
-      alert("Gender is required");
-      return;
+      setError("gender-error", "Gender is required");
+      isValid = false;
     }
 
     if (!password) {
-      alert("Password is required");
-      return;
+      setError("password-error", "Password is required");
+      isValid = false;
     }
-    if (password.length < 6) {
-      alert("Password should be at least 6 characters long!");
-      return;
+
+    if (!validatePassword(password)) {
+      setError(
+        "password-error",
+        "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character"
+      );
+      isValid = false;
     }
+
     if (!confirmPassword) {
-      alert("Confirm Password is required");
-      return;
+      setError("cpassword-error", "Confirm Password is required");
+      isValid = false;
     }
 
     if (password !== confirmPassword) {
-      alert("Password and Confirm password should match!");
-      return;
+      setError("cpassword-error", "Password and Confirm password should match");
+      isValid = false;
+    }
+
+    if (isValid) {
+      alert("Form submitted successfully!");
+      form.reset();
     }
   });
+
+  function clearErrors() {
+    const errorMessages = document.getElementsByClassName("error-message");
+    for (let item of errorMessages) {
+      item.innerHTML = "";
+    }
+  }
+
+  function setError(id, error) {
+    document.getElementById(id).innerHTML = error;
+  }
 
   function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
+  }
+
+  function validatePassword(password) {
+    // expression to match the password criteria
+    const re =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return re.test(password);
   }
 });
