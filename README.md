@@ -1,6 +1,6 @@
 
 ## Form Validation
-- [LIVE 🌐](https://apsarabishwokarma.github.io/Javascript-snippet/frontend/form)
+- [LIVE 🌐](https://apsarabishwokarma.github.io/Javascript-snippet/frontend%20/form)
 
 
 ## Meeting Reservation
