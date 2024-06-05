@@ -94,14 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Define the regex pattern for email validation
     return re.test(email);
   }
 
   function validatePassword(password) {
     // expression to match the password criteria
     const re =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/; // Define the regex pattern for password validation
     return re.test(password);
   }
 });

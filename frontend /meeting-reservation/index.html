@@ -9,23 +9,36 @@
 </head>
 
 <body>
-  <h1>Reserve Meeting with CEO</h1>
-  <form id="reservationForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" required>
+  <div class="container">
+    <div class="form-container">
+      <h2>Reserve Meeting with <br>CEO Er.Apsara</h2>
+      <form id="reservationForm">
+        <label for="name">FullName:</label>
+        <input type="text" id="name" required>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" required>
 
-    <label for="timeSlot">Select Time Slot:</label>
-    <select id="timeSlot" required>
-      <option value="9-11">9:00 AM - 11:00 AM</option>
-      <option value="12-2">12:00 PM - 2:00 PM</option>
-      <option value="3-5">3:00 PM - 5:00 PM</option>
-    </select>
+        <label for="timeSlot">Select Meeting Time Slot:</label>
+        <select id="timeSlot" required>
+          <option value="8-9">8:00 AM - 9:00 AM</option>
+          <option value="11-1">11:00 PM - 1:00 PM</option>
+          <option value="3-5">3:00 PM - 5:00 PM</option>
+        </select>
 
-    <button type="submit">Reserve</button>
-  </form>
-  <div id="reservations">
-    <h2>Existing Reservations</h2>
-    <ul id="reservationList"></ul>
+        <button type="submit">Reserve</button>
+      </form>
+      <div class="separator"></div>
+
+      <div id="reservations">
+        <h5>Existing Reservations</h5>
+        <ul id="reservationList">
+          <li>Rupesh Budhathoki (11Am -1pm)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/meeting.png" alt="Meeting" />
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
