@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clearErrors();
 
     // Get form values wrt ids
-    const firstName = document.getElementById("firstname").value.trim();
+    const firstName = document.getElementById("firstname").value.trim(); //trim fxn to remove spaces
     const lastName = document.getElementById("lastname").value.trim();
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
