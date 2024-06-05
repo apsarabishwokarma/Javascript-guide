@@ -1,10 +1,10 @@
 
 ## Form Validation
-- [LIVE 🌐](https://apsarabishwokarma.github.io/Javascript-snippet/form)
+- [LIVE 🌐](https://apsarabishwokarma.github.io/Javascript-snippet/frontend/form)
 
 
   ## Form Validation
-- [LIVE 🌐](https://apsarabishwokarma.github.io/Javascript-snippet/meeting-resevation)
+- [LIVE 🌐](https://apsarabishwokarma.github.io/Javascript-snippet/frontend/meeting-reservation)
 
 
 ```js
