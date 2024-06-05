@@ -55,6 +55,11 @@ button {
   box-sizing: border-box;
 }
 
+.time-container {
+  display: flex;
+  gap: 10px;
+}
+
 button {
   margin-top: 20px;
   background-color: green;

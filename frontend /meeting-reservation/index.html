@@ -18,12 +18,22 @@
         <label for="subject">Subject:</label>
         <input type="text" id="subject" required>
 
-        <label for="timeSlot">Select Meeting Time Slot:</label>
+        <!-- <label for="timeSlot">Select Meeting Time Slot:</label>
         <select id="timeSlot" required>
           <option value="8-9">8:00 AM - 9:00 AM</option>
           <option value="11-1">11:00 PM - 1:00 PM</option>
           <option value="3-5">3:00 PM - 5:00 PM</option>
-        </select>
+        </select> -->
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        <div class="time-container">
+          <label for="stime">Start Time:</label>
+          <input type="time" id="stime" required>
+          <label for="etime">End Time:</label>
+          <input type="time" id="etime" required>
+        </div>
+
 
         <button type="submit">Reserve</button>
       </form>
